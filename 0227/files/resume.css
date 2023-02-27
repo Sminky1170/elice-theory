@@ -1,0 +1,27 @@
+* {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.profile {
+  width: 200px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#self-introduction {
+  margin-top: 30px;
+}
+
+.selfIntro {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
