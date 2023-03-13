@@ -47,25 +47,29 @@ function getKMFromMeter(meter) {
 }
 
 function changeDataFromMM(mm) {
-  cm.value = getCMFromMM(mm);
-  meter.value = getMeterFromMM(mm);
-  km.value = getKMFromMM(mm);
+  const cm = getCMFromMM(mm);
+  const meter = getMeterFromMM(mm);
+  const km = getKMFromMM(mm);
+  return { mm, cm, meter, km };
 }
 
 function changeDataFromCM(cm) {
-  mm.value = getMMFromCM(cm);
-  meter.value = getMeterFromCM(cm);
-  km.value = getKMFromCM(cm);
+  const mm = getMMFromCM(cm);
+  const meter = getMeterFromCM(cm);
+  const km = getKMFromCM(cm);
+  return { mm, cm, meter, km };
 }
 
 function changeDataFromMeter(meter) {
-  mm.value = getMMFromMeter(meter);
-  cm.value = getCMFromMeter(meter);
-  km.value = getKMFromMeter(meter);
+  const mm = getMMFromMeter(meter);
+  const cm = getCMFromMeter(meter);
+  const km = getKMFromMeter(meter);
+  return { mm, cm, meter, km };
 }
 
 function changeDataFromKM(km) {
-  mm.value = getMMFromKM(km);
-  cm.value = getCMFromKM(km);
-  meter.value = getMeterFromKM(km);
+  const mm = getMMFromKM(km);
+  const cm = getCMFromKM(km);
+  const meter = getMeterFromKM(km);
+  return { mm, cm, meter, km };
 }
