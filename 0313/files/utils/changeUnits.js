@@ -45,3 +45,27 @@ function getKMFromCM(cm) {
 function getKMFromMeter(meter) {
   return meter / 1000;
 }
+
+function changeDataFromMM(mm) {
+  cm.value = getCMFromMM(mm);
+  meter.value = getMeterFromMM(mm);
+  km.value = getKMFromMM(mm);
+}
+
+function changeDataFromCM(cm) {
+  mm.value = getMMFromCM(cm);
+  meter.value = getMeterFromCM(cm);
+  km.value = getKMFromCM(cm);
+}
+
+function changeDataFromMeter(meter) {
+  mm.value = getMMFromMeter(meter);
+  cm.value = getCMFromMeter(meter);
+  km.value = getKMFromMeter(meter);
+}
+
+function changeDataFromKM(km) {
+  mm.value = getMMFromKM(km);
+  cm.value = getCMFromKM(km);
+  meter.value = getMeterFromKM(km);
+}
