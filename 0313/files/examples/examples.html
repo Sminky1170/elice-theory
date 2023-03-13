@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="change-color">색상 변경</button>
+    <script>
+      // 버튼 요소에 접근
+      var button = document.getElementById("change-color");
+      // 버튼에 클릭 이벤트 핸들러 등록
+      button.addEventListener("click", function (e) {
+        console.log(e);
+        // 현재 배경색을 가져옴
+        var currentColor = document.body.style.backgroundColor;
+        // 배경색을 변경할 색상 배열
+        var colors = ["red", "green", "blue", "yellow"];
+        // 현재 색상과 다른 색상을 랜덤하게 선택
+        var newColor;
+        do {
+          newColor = colors[Math.floor(Math.random() * colors.length)];
+        } while (newColor === currentColor);
+        // 배경색을 변경함
+        document.body.style.backgroundColor = newColor;
+      });
+    </script>
+  </body>
+</html>
