@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title>Attributes example</title>
+    <script type="text/javascript">
+      function showFirstAttr() {
+        var firstPara = document.getElementById("p1");
+        var outputText = document.getElementById("result");
+
+        // 먼저, paragraph에 어떤 속성이 있는지 검증
+        if (firstPara.hasAttributes()) {
+          var attrs = firstPara.attributes;
+          var text = "";
+          for (var i = attrs.length - 1; i >= 0; i--) {
+            text += attrs[i].name + "->" + attrs[i].value + " ";
+          }
+          outputText.value = text;
+        } else {
+          outputText.value = "No attributes to show";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <p id="p1" style="color: green">Sample Paragraph</p>
+    <form action="">
+      <p><input type="button" value="Show first attribute name and value" onclick="showFirstAttr();" /> <input id="result" type="text" value="" /></p>
+    </form>
+  </body>
+</html>
