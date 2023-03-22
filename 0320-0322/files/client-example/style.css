@@ -38,17 +38,29 @@ a {
   margin: 0 10px;
 }
 
+#weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  margin: 10px 10px;
+}
+
 .status {
   font-size: 18px;
-  margin: 0 10px;
 }
 
 .temperature {
   font-size: 18px;
-  margin: 0 10px;
 }
 
 .findust {
+  font-size: 18px;
+}
+
+.update-button {
   font-size: 18px;
   margin: 0 10px;
 }
