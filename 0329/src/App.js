@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './App.css';
+import './App2.css';
 import counterStyle from './Counter.module.css';
 console.log('counterStyle', counterStyle);
 function Counter({title, initValue}){
@@ -13,12 +14,12 @@ function Counter({title, initValue}){
     // })    
   }
   const design = {
-    border:'5px solid red',
+    border:'5px solid tomato',
     backgroundColor:'gray'
   }
   return (
     <div style={design}>
-      <h1 className="title">{title}</h1>
+      <h1 className={'title '+counterStyle.titleRed}>{title}</h1>
       <button onClick={up} className={counterStyle.rightSpace}>+</button> {count}
     </div>
   )
