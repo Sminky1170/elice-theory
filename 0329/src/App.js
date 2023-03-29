@@ -9,8 +9,12 @@ function Counter({title, initValue}){
     //   return oldCount+1;
     // })    
   }
+  const design = {
+    border:'5px solid red',
+    backgroundColor:'gray'
+  }
   return (
-    <div>
+    <div style={design}>
       <h1>{title}</h1>
       <button onClick={up}>+</button> {count}
     </div>
