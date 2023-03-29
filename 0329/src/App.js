@@ -1,21 +1,31 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
 import './App2.css';
 import counterStyle from './Counter.module.css';
 console.log('counterStyle', counterStyle);
 function Counter({title, initValue}){
   const [count, setCount] = useState(initValue);
-  console.log('Counter', count);
+  useEffect(()=>{
+    fetch('http://localhost:9999/counter').then(function(resp){
+        return resp.json();
+    }).then(function(result){
+        setCount(result.value);  
+    })
+  },[]);
   function up(){
-    setCount(count+1);
-    // setCount(function(oldCount){
-    //   console.log('oldCount', oldCount);
-    //   return oldCount+1;
-    // })    
+    fetch('http://localhost:9999/counter', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ value: count+1 })
+    })
+      .then(response => response.json())
+      .then(data => setCount(data.value))
+      .catch(error => console.error(error));
   }
   const design = {
-    border:'5px solid tomato',
-    backgroundColor:'gray'
+    border:'5px solid tomato'
   }
   return (
     <div style={design}>
@@ -30,7 +40,7 @@ function Counter2(){
 function App() {
   return (
     <div className="App">
-      <Counter title="카운터" initValue={10}></Counter>
+      <Counter title="카운터" initValue={0}></Counter>
       <Counter2></Counter2>
     </div>
   );
