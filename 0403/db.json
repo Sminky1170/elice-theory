@@ -24,16 +24,6 @@
       "title": "nodejs",
       "body": "nodejs is ..",
       "id": 5
-    },
-    {
-      "title": "mongodb",
-      "body": "mongodb is ...",
-      "id": 6
-    },
-    {
-      "title": "gpt",
-      "body": "gpt is ...",
-      "id": 7
     }
   ]
 }

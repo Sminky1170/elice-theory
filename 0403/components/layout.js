@@ -21,7 +21,15 @@ export default function Layout({children}) {
     if(router.query.id !== undefined){
       contextUI = <>
         <li><Link href={`/update/${router.query.id}`}>Update</Link></li>
-        <li><Link href="/delete">Delete</Link></li>
+        <li><button onClick={evt=>{
+          fetch('http://localhost:9999/topics/' + router.query.id, {
+            method: 'DELETE'
+          })
+            .then((response) => response.json())
+            .then((result) => {
+              router.push('/');
+            });
+        }}>Delete</button></li>
       </>
     }
     return (
