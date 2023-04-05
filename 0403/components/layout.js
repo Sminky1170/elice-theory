@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { useEffect,useState } from 'react';
 import Container from '@mui/material/Container';
+import { Grid } from '@mui/material';
 export default function Layout({children}) {
   const [topics, setTopics] = useState([]);
   const router = useRouter();
@@ -37,12 +38,18 @@ export default function Layout({children}) {
       <Container maxWidth="md">
         <h1><Link href="/">WEB App</Link></h1>
         <input type="text" placeholder="search" />
-        <ol>
-          {lis}
-        </ol>
-        <article>
-            {children}
-        </article>
+        <Grid container>
+          <Grid item md={2} xs={12}>
+            <ol>
+              {lis}
+            </ol>
+          </Grid>
+          <Grid item md={10} xs={12}>
+            <article>
+                {children}
+            </article>
+          </Grid>
+        </Grid>
         <ul>
           <li><Link href="/create">Create</Link></li>
           {contextUI}
