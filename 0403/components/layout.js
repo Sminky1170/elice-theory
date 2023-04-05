@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import { useEffect,useState } from 'react'
 export default function Layout({children}) {
   const [topics, setTopics] = useState([]);
+  const router = useRouter();
   useEffect(()=>{
     fetch('http://localhost:9999/topics')
       .then(resp=>resp.json())
@@ -9,7 +11,7 @@ export default function Layout({children}) {
         console.log(result);
         setTopics(result);
       })
-  },[])
+  },[router.asPath])
     const lis = topics.map((t)=>{
       return <li key={t.id}>
         <Link href={"/read/"+t.id}>{t.title}</Link>
