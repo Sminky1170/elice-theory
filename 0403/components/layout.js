@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import { useEffect,useState } from 'react'
+import { useEffect,useState } from 'react';
+import Container from '@mui/material/Container';
 export default function Layout({children}) {
   const [topics, setTopics] = useState([]);
   const router = useRouter();
@@ -33,7 +34,7 @@ export default function Layout({children}) {
       </>
     }
     return (
-      <>
+      <Container maxWidth="md">
         <h1><Link href="/">WEB App</Link></h1>
         <input type="text" placeholder="search" />
         <ol>
@@ -46,7 +47,7 @@ export default function Layout({children}) {
           <li><Link href="/create">Create</Link></li>
           {contextUI}
         </ul>
-      </>
+      </Container>
     )
   }
   
