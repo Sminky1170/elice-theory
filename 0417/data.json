@@ -1,0 +1,65 @@
+[
+  {
+    "date": "2022-01-01T00:00:00Z",
+    "product": "Widget",
+    "quantity": 10,
+    "price": 5.0,
+    "region": "East"
+  },
+  {
+    "date": "2022-01-01T00:00:00Z",
+    "product": "Gizmo",
+    "quantity": 5,
+    "price": 10.0,
+    "region": "East"
+  },
+  {
+    "date": "2022-01-01T00:00:00Z",
+    "product": "Widget",
+    "quantity": 8,
+    "price": 5.0,
+    "region": "West"
+  },
+  {
+    "date": "2022-01-01T00:00:00Z",
+    "product": "Gizmo",
+    "quantity": 3,
+    "price": 10.0,
+    "region": "West"
+  },
+  {
+    "date": "2022-01-01T00:00:00Z",
+    "product": "Thingamabob",
+    "quantity": 2,
+    "price": 15.0,
+    "region": "West"
+  },
+  {
+    "date": "2022-01-02T00:00:00Z",
+    "product": "Widget",
+    "quantity": 5,
+    "price": 5.0,
+    "region": "East"
+  },
+  {
+    "date": "2022-01-02T00:00:00Z",
+    "product": "Gizmo",
+    "quantity": 2,
+    "price": 10.0,
+    "region": "East"
+  },
+  {
+    "date": "2022-01-02T00:00:00Z",
+    "product": "Thingamabob",
+    "quantity": 1,
+    "price": 15.0,
+    "region": "West"
+  },
+  {
+    "date": "2022-01-02T00:00:00Z",
+    "product": "Widget",
+    "quantity": 3,
+    "price": 5.0,
+    "region": "West"
+  }
+]
