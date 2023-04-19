@@ -4,8 +4,8 @@ const GoogleStrategy = require("passport-google-oauth2");
 passport.use(
   new GoogleStrategy(
     {
-      clientID: "",
-      clientSecret: "",
+      clientID: "구글 client ID",
+      clientSecret: "구글 secret ID",
       callbackURL: "http://localhost:4000/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {

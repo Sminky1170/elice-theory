@@ -41,6 +41,6 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/html/index.html");
 });
 
-app.listen(4000, () => {
+app.listen(4001, () => {
   console.log(`서버 실행 중`);
 });
