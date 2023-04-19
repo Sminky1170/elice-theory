@@ -2,6 +2,7 @@ const router = require("express").Router();
 const bcrypt = require("bcrypt");
 
 const User = require("../models/user");
+const passport = require("../passport");
 
 router.post("/signup", async (req, res, next) => {
   const { username, password } = req.body;
@@ -22,6 +23,6 @@ router.post("/signup", async (req, res, next) => {
   res.send("회원가입 잘 됨");
 });
 
-router.post("/login", (req, res) => {});
+router.post("/login", passport.authenticate("local"));
 
 module.exports = router;
